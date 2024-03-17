@@ -1,0 +1,122 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+:root{
+    --color-background: #02494D;
+    --color-card: #0E2127;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: var(--color-background);
+    color: #fdfdfd;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    width: 75vw;
+    max-width: 650px;
+    padding: 50px;
+    background: var(--color-card);
+    border-radius: 25px;
+}
+
+.card img{
+    max-width: 280px;
+    width: 35vw;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    margin-left: -100px;
+    margin-right: 40px;
+    border-radius: inherit;
+    box-shadow: 0 60px 40px rgba(0, 0, 0, 5%);
+    transition: all .5s;
+}
+
+
+.card h2{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+
+.card h3{
+    font-size: 22px;
+    font-weight: 400;
+    opacity: 0.75;
+}
+
+.card p{
+    font-size: 14px;
+    font-weight: 200;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    opacity: 0.5;
+    max-width: 360px;
+}
+
+.card button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 50px;
+    border: 1px solid #fdfdfd;
+    border-radius: 40px;
+    background: transparent;
+    color: #fdfdfd;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.card button:hover{
+    background: #fdfdfd;
+    color: var(--color-card);
+    font-size: 22px;
+}
+
+.card:hover img{
+    transform: scale(1.1);
+}
+
+
+/* MEDIA QUERY */
+@media (max-width: 600px) {
+    .card{
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .card img{
+        margin: -100px 0 30px 0;
+        width: 100%;
+        max-width: 1000px;
+    }
+
+    .card button{
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .card img{
+        height: 45vw;
+        width: 45vw;
+        border-radius: 50%;
+    }
+}
